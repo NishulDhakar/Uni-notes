@@ -1,0 +1,204 @@
+{
+  "courses": [
+    {
+      "slug": "btech",
+      "title": "B.Tech",
+      "branches": [
+
+        {
+          "slug": "aiml",
+          "title": "Artificial intelligence and Machine learning",
+          "semesters": [
+            {
+              "slug": "sem1",
+              "title": "Semester 1",
+              "subjects": [
+                {
+                  "slug": "intro-to-web",
+                  "title": "Introduction to Web",
+                  "units": [
+                    {
+                      "slug": "unit-1",
+                      "title": "WWW & HTTP",
+                      "path": "/content/courses/btech/cse/sem1/intro-to-web/unit-1.mdx"
+                    },
+                    {
+                      "slug": "unit-2",
+                      "title": "HTML Basics",
+                      "path": "/content/courses/btech/cse/sem1/intro-to-web/unit-2.mdx"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "sem2",
+              "title": "Semester 2",
+              "subjects": []
+            },
+            {
+              "slug": "sem3",
+              "title": "Semester 3",
+              "subjects": []
+            },
+            {
+              "slug": "sem4",
+              "title": "Semester 4",
+              "subjects": []
+            },
+            {
+              "slug": "sem5",
+              "title": "Semester 5",
+              "subjects": []
+            },
+            {
+              "slug": "sem6",
+              "title": "Semester 6",
+              "subjects": []
+            },
+
+    {
+      "slug": "sem7",
+      "title": "Semester 7",
+      "subjects": [
+        {
+          "slug": "computer-vision",
+          "title": "Computer Vision",
+          "units": [
+            {
+              "slug": "unit-1",
+              "title": "Unit 1",
+              "path": "/content/courses/btech/aiml/sem7/computer-vision/unit-1.mdx"
+            },
+            {
+              "slug": "unit-2",
+              "title": "Unit 2",
+              "path": "/content/courses/btech/aiml/sem7/computer-vision/unit-2.mdx"
+            },
+            {
+              "slug": "unit-3",
+              "title": "Unit 3",
+              "path": "/content/courses/btech/aiml/sem7/computer-vision/unit-3.mdx"
+            }
+          ]
+        },
+        {
+          "slug": "ml-for-data-science",
+          "title": "Machine Learning for Data Science",
+          "units": [
+            {
+              "slug": "unit-1",
+              "title": "Unit 1",
+              "path": "/content/courses/btech/aiml/sem7/ml-for-data-science/unit-1.mdx"
+            },
+            {
+              "slug": "unit-2",
+              "title": "Unit 2",
+              "path": "/content/courses/btech/aiml/sem7/ml-for-data-science/unit-2.mdx"
+            }
+          ]
+        },
+        {
+          "slug": "internet-web-technologies",
+          "title": "Internet Web Technologies",
+          "units": [
+            {
+              "slug": "unit-1",
+              "title": "Unit 1",
+              "path": "/content/courses/btech/aiml/sem7/internet-web-technologies/unit-1.mdx"
+            },
+            {
+              "slug": "unit-2",
+              "title": "Unit 2",
+              "path": "/content/courses/btech/aiml/sem7/internet-web-technologies/unit-2.mdx"
+            }
+          ]
+        }
+      ]
+    },
+
+            {
+              "slug": "sem8",
+              "title": "Semester 8",
+              "subjects": []
+            }
+          ]
+        },
+        {
+          "slug": "it",
+          "title": "Information Technology",
+          "semesters": [
+            { "slug": "sem1", "title": "Semester 1", "subjects": [] },
+            { "slug": "sem2", "title": "Semester 2", "subjects": [] },
+            { "slug": "sem3", "title": "Semester 3", "subjects": [] },
+            { "slug": "sem4", "title": "Semester 4", "subjects": [] },
+            { "slug": "sem5", "title": "Semester 5", "subjects": [] },
+            { "slug": "sem6", "title": "Semester 6", "subjects": [] },
+            { "slug": "sem7", "title": "Semester 7", "subjects": [] },
+            { "slug": "sem8", "title": "Semester 8", "subjects": [] }
+          ]
+        },
+
+        {
+          "slug": "ece",
+          "title": "Electronics & Communication",
+          "semesters": [
+            { "slug": "sem1", "title": "Semester 1", "subjects": [] },
+            { "slug": "sem2", "title": "Semester 2", "subjects": [] },
+            { "slug": "sem3", "title": "Semester 3", "subjects": [] },
+            { "slug": "sem4", "title": "Semester 4", "subjects": [] },
+            { "slug": "sem5", "title": "Semester 5", "subjects": [] },
+            { "slug": "sem6", "title": "Semester 6", "subjects": [] },
+            { "slug": "sem7", "title": "Semester 7", "subjects": [] },
+            { "slug": "sem8", "title": "Semester 8", "subjects": [] }
+          ]
+        },
+
+        {
+          "slug": "me",
+          "title": "Mechanical Engineering",
+          "semesters": [
+            { "slug": "sem1", "title": "Semester 1", "subjects": [] },
+            { "slug": "sem2", "title": "Semester 2", "subjects": [] },
+            { "slug": "sem3", "title": "Semester 3", "subjects": [] },
+            { "slug": "sem4", "title": "Semester 4", "subjects": [] },
+            { "slug": "sem5", "title": "Semester 5", "subjects": [] },
+            { "slug": "sem6", "title": "Semester 6", "subjects": [] },
+            { "slug": "sem7", "title": "Semester 7", "subjects": [] },
+            { "slug": "sem8", "title": "Semester 8", "subjects": [] }
+          ]
+        },
+
+        {
+          "slug": "civil",
+          "title": "Civil Engineering",
+          "semesters": [
+            { "slug": "sem1", "title": "Semester 1", "subjects": [] },
+            { "slug": "sem2", "title": "Semester 2", "subjects": [] },
+            { "slug": "sem3", "title": "Semester 3", "subjects": [] },
+            { "slug": "sem4", "title": "Semester 4", "subjects": [] },
+            { "slug": "sem5", "title": "Semester 5", "subjects": [] },
+            { "slug": "sem6", "title": "Semester 6", "subjects": [] },
+            { "slug": "sem7", "title": "Semester 7", "subjects": [] },
+            { "slug": "sem8", "title": "Semester 8", "subjects": [] }
+          ]
+        },
+
+        {
+          "slug": "ee",
+          "title": "Electrical Engineering",
+          "semesters": [
+            { "slug": "sem1", "title": "Semester 1", "subjects": [] },
+            { "slug": "sem2", "title": "Semester 2", "subjects": [] },
+            { "slug": "sem3", "title": "Semester 3", "subjects": [] },
+            { "slug": "sem4", "title": "Semester 4", "subjects": [] },
+            { "slug": "sem5", "title": "Semester 5", "subjects": [] },
+            { "slug": "sem6", "title": "Semester 6", "subjects": [] },
+            { "slug": "sem7", "title": "Semester 7", "subjects": [] },
+            { "slug": "sem8", "title": "Semester 8", "subjects": [] }
+          ]
+        }
+      ]
+    }
+  ]
+}
