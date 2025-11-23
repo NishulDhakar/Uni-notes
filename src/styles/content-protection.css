@@ -1,0 +1,12 @@
+/* apply to reader container */
+.nocopy {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+/* disable selection pseudo */
+.nocopy *::selection { background: transparent; color: inherit; }
+
+/* hide caret on selection attempts */
+.nocopy input, .nocopy textarea { user-select: text !important; }
