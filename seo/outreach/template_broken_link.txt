@@ -1,0 +1,15 @@
+Subject: Broken link on your {Page Name} page
+
+Hi {Name},
+
+I was browsing your {Page Name} page today and noticed a broken link.
+
+The link to "{Old Site Name}" seems to be dead/404.
+
+If you're looking for a replacement, we have an updated and active library of similar notes at RGPVNotes.in. It might be a good fix for your readers.
+
+Hope that helps!
+
+Best,
+{Your Name}
+RGPVNotes.in

@@ -1,0 +1,16 @@
+Category,Issue,Priority,Impact,Status,Fix Instructions
+Technical,Missing XML Sitemap,HIGH,High,Pending,Generate sitemap.xml using next-sitemap
+Technical,Robots.txt missing,HIGH,High,Pending,Create robots.txt allowing bots
+Technical,Slow LCP (>2.5s),HIGH,High,Pending,Optimize hero images with next/image priority
+Technical,Missing Canonical Tags,HIGH,High,Pending,Add <link rel="canonical"> to all pages
+Technical,Duplicate Title Tags,HIGH,High,Pending,Ensure dynamic titles for all unit/subject pages
+Content,Thin Content (<300 words),MEDIUM,Medium,Pending,Merge short units or expand with FAQs
+Content,Missing H1 Tags,HIGH,High,Pending,Ensure exactly one H1 per page
+Content,Duplicate Meta Descriptions,MEDIUM,Medium,Pending,Use template: {Subject} Unit {N} Notes - RGPV
+UX,Mobile Tap Targets too small,MEDIUM,Medium,Pending,Increase button padding to 44px min
+UX,Cumulative Layout Shift (>0.1),MEDIUM,Medium,Pending,Add width/height to all images/iframes
+Links,Orphaned Pages,MEDIUM,Medium,Pending,Link all units from Subject hub page
+Links,Broken Internal Links,HIGH,High,Pending,Run Screaming Frog to identify 404s
+Schema,Missing Breadcrumb Schema,MEDIUM,Medium,Pending,Add BreadcrumbList JSON-LD
+Schema,Missing Course Schema,LOW,Low,Pending,Add Course JSON-LD to subject pages
+Off-Page,Low Domain Authority,HIGH,High,Pending,Start outreach campaign to .edu sites

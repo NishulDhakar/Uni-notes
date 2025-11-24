@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Disallow admin or private routes
+Disallow: /admin/
+Disallow: /api/auth/
+
+# Disallow raw PDF files if you want to force users to landing pages (Optional)
+# Disallow: /files/*.pdf
+
+Sitemap: https://www.rgpvnotes.in/sitemap.xml

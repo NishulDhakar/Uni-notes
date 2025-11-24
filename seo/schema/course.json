@@ -1,0 +1,16 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "{Course Name}",
+    "description": "{Course Description}",
+    "provider": {
+        "@type": "Organization",
+        "name": "RGPVNotes.in",
+        "sameAs": "https://www.rgpvnotes.in"
+    },
+    "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "online",
+        "courseWorkload": "PT30H"
+    }
+}

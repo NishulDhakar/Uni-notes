@@ -1,0 +1,8 @@
+Source URL,Target URL,Type,Notes
+/notes/cse/7th-sem/ml,/dashboard/btech/cse/sem7/machine-learning,301,Old structure to new
+/notes/cse/7th-sem/cloud,/dashboard/btech/cse/sem7/cloud-computing,301,Old structure to new
+/syllabus/cse,/dashboard/btech/cse/syllabus,301,Consolidated syllabus page
+/pyq/cse/2023,/dashboard/btech/cse/pyq,301,Yearly archives to main PYQ hub
+/download/file.php?id=123,/files/btech-cse-sem7-ml-unit1.pdf,301,Legacy download script to static file
+/contact-us,/contact,301,Clean URL
+/about-us,/about,301,Clean URL
