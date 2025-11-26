@@ -5,9 +5,10 @@ import { ChevronRight, FileText, Folder, Lock } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { getCourseData, getNoteContent, Unit, Subject, Semester, Branch, Course } from "@/lib/course-utils";
-import { MDXRemote } from 'next-mdx-remote/rsc';
+
 import { redirect } from "next/navigation";
 import { ClientSplitViewWrapper } from "./client-wrapper";
+import { MDXRemote } from 'next-mdx-remote/rsc';
 
 // Components for MDX
 const components = {

@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ChevronRight,
-  BookOpen,
   GraduationCap,
   LayoutDashboard,
   Settings,
@@ -15,6 +14,7 @@ import {
   Folder
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 // Mock Data for the Tree
 const navigationData = [
@@ -172,15 +172,21 @@ const SidebarItem = ({ item, depth = 0 }: SidebarItemProps) => {
   );
 };
 
-export function AppSidebar() {
+export function AppSidebar({ className }: { className?: string }) {
   return (
-    <aside className="w-64 h-screen bg-sidebar border-r border-sidebar-border flex flex-col sticky top-0">
+    <aside className={cn("w-64 h-screen bg-sidebar border-r border-sidebar-border flex flex-col sticky top-0", className)}>
       {/* Header */}
       <div className="p-4 border-b border-sidebar-border">
         <div className="flex items-center gap-2 font-bold text-lg text-sidebar-foreground">
-          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground">
-            <BookOpen className="w-5 h-5" />
-          </div>
+          {/* <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground"> */}
+          <Image
+            src="/logo.svg"
+            alt="Logo"
+            width={24}
+            height={24}
+            className="w-6 h-6"
+          />
+          {/* </div> */}
           UniNotes
         </div>
       </div>
