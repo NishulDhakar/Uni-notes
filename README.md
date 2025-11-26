@@ -2,6 +2,8 @@
 
 A fast, minimal, and structured web platform designed to help students access university notes, syllabus, and previous year papers with a clean and distraction-free reading experience. Built with Next.js 15, the platform uses MDX for content delivery, features a Notion-style interface, secure reading capabilities, and includes a comprehensive admin panel for managing academic content.
 
+<img width="2395" height="1150" alt="Gemini_Generated_Image_ummq80ummq80ummq 1" src="https://github.com/user-attachments/assets/29c782b9-0e86-48c6-b11b-e10ff829c92c" />
+
 ## Features
 
 ### Core Features
