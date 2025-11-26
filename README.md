@@ -1,4 +1,4 @@
-# Uni Notes — University Notes and previous year papers Platform
+# Uni Notes — University Notes & previous year papers Platform
 
 A fast, minimal, and structured web platform designed to help students access university notes, syllabus, and previous year papers with a clean and distraction-free reading experience. Built with Next.js 15, the platform uses MDX for content delivery, features a Notion-style interface, secure reading capabilities, and includes a comprehensive admin panel for managing academic content.
 
