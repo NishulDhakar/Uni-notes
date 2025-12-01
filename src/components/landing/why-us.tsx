@@ -52,12 +52,12 @@ export function WhyUs() {
             <motion.div
                 animate={{ y: [0, -30, 0] }}
                 transition={{ repeat: Infinity, duration: 10 }}
-                className="absolute top-10 left-16 w-40 h-40 bg-purple-400/40 rounded-full blur-3xl"
+                className="absolute top-10 left-16 w-40 h-40 rounded-full blur-3xl"
             />
             <motion.div
                 animate={{ y: [0, 40, 0] }}
                 transition={{ repeat: Infinity, duration: 12 }}
-                className="absolute bottom-10 right-20 w-52 h-52 bg-blue-400/40 rounded-full blur-3xl"
+                className="absolute bottom-10 right-20 w-52 h-52 rounded-full blur-3xl"
             />
 
             <div className="max-w-7xl mx-auto relative">

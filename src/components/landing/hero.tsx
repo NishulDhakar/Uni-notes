@@ -170,7 +170,7 @@ export function Hero() {
                                             <button
                                                 key={uni.slug}
                                                 onClick={() => handleUniversitySelect(uni.slug)}
-                                                className="group flex flex-col items-center justify-center p-24 rounded-2xl bg-white border border-gray-100 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+                                                className="group flex border border-gray-800 flex-col items-center justify-center p-24 rounded-2xl bg-white border border-gray-100 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
                                             >
                                                 <span className="text-3xl font-black text-gray-400 group-hover:text-gray-500 mb-2 transition-colors">{uni.label}</span>
                                             </button>
@@ -191,7 +191,7 @@ export function Hero() {
                                             <button
                                                 key={branch.slug}
                                                 onClick={() => handleBranchSelect(branch.slug)}
-                                                className="group flex flex-col items-center justify-center p-6 rounded-2xl bg-white border border-gray-100 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+                                                className="group border border-gray-800 flex flex-col items-center justify-center p-6 rounded-2xl bg-white border border-gray-100 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
                                             >
                                                 <span className="font-semibold text-gray-900 group-hover:text-primary transition-colors">{branch.label}</span>
                                             </button>
@@ -222,9 +222,9 @@ export function Hero() {
                                         <Link
                                             key={sem.slug}
                                             href={`/dashboard/btech/${selectedBranch}/${sem.slug}`}
-                                            className="group flex flex-col items-center justify-center p-6 rounded-2xl bg-white border border-gray-100 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+                                            className="group border border-gray-800 flex flex-col items-center justify-center p-6 rounded-2xl bg-white border border-gray-100 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
                                         >
-                                            <span className="text-3xl font-black text-gray-200 group-hover:text-gray-500 mb-2 transition-colors">{sem.label.split(" ")[1]}</span>
+                                            <span className="text-3xl  font-black text-gray-200 group-hover:text-gray-500 mb-2 transition-colors">{sem.label.split(" ")[1]}</span>
                                             <span className="font-bold text-gray-900 group-hover:text-gray-800 transition-colors">Semester</span>
                                         </Link>
                                     ))}
