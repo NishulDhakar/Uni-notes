@@ -11,16 +11,22 @@ import {
 import { cn } from "@/lib/utils";
 import { FloatingLogo } from "@/components/floating-logo";
 import { useSearchParams, useRouter } from "next/navigation";
+import { label } from "framer-motion/client";
+
+const universities = [
+    { label: "RGPV", slug: "rgpv" },
+    { label: "AKTU", slug: "" },
+];
 
 const branches = [
+    { label: "CSE", slug: "cse" },
     { label: "AIML", slug: "aiml" },
-    { label: "Info Tech", slug: "it" },
-    { label: "Electronics", slug: "ece" },
-    { label: "Mechanical", slug: "me" },
-    { label: "Civil", slug: "civil" },
-    { label: "Electrical", slug: "ee" },
-    { label: "Computer Science", slug: "cse" },
-    { label: "Chemical", slug: "chem" },
+    { label: "IT", slug: "" },
+    { label: "Electronics", slug: "" },
+    { label: "Mechanical", slug: "" },
+    { label: "Civil", slug: "" },
+    { label: "Electrical", slug: "" },
+    { label: "Chemical", slug: "" },
 ];
 
 const semesters = [
@@ -38,24 +44,32 @@ export function Hero() {
     const searchParams = useSearchParams();
     const router = useRouter();
 
-    const [step, setStep] = useState<"branch" | "semester">("branch");
+    const [step, setStep] = useState<"university" | "branch" | "semester">("university");
+    const [selectedUniversity, setSelectedUniversity] = useState<string | null>(null);
     const [selectedBranch, setSelectedBranch] = useState<string | null>(null);
     const [showAllBranches, setShowAllBranches] = useState(false);
 
     // Sync state from URL on mount
     useEffect(() => {
+        const university = searchParams.get("university");
         const branch = searchParams.get("branch");
 
-        if (branch) {
-            setSelectedBranch(branch);
-            setStep("semester");
+        if (university) {
+            setSelectedUniversity(university);
+            if (branch) {
+                setSelectedBranch(branch);
+                setStep("semester");
+            } else {
+                setStep("branch");
+            }
         } else {
-            setStep("branch");
+            setStep("university");
         }
     }, [searchParams]);
 
-    const updateUrl = (branch: string | null) => {
+    const updateUrl = (university: string | null, branch: string | null) => {
         const params = new URLSearchParams();
+        if (university) params.set("university", university);
         if (branch) params.set("branch", branch);
 
         const newUrl = params.toString() ? `/?${params.toString()}` : "/";
@@ -65,19 +79,26 @@ export function Hero() {
     const handleBranchSelect = (slug: string) => {
         setSelectedBranch(slug);
         setStep("semester");
-        updateUrl(slug);
+        updateUrl(selectedUniversity, slug);
+    };
+
+    const handleUniversitySelect = (slug: string) => {
+        setSelectedUniversity(slug);
+        setStep("branch");
+        updateUrl(slug, null);
     };
 
     const resetSelection = () => {
-        setStep("branch");
+        setStep("university");
+        setSelectedUniversity(null);
         setSelectedBranch(null);
-        updateUrl(null);
+        updateUrl(null, null);
     };
 
     const visibleBranches = showAllBranches ? branches : branches.slice(0, 6);
 
     return (
-        <section className="flex-1 flex flex-col items-center justify-center px-4 py-24 text-center relative overflow-hidden">
+        <section className="flex-1  flex flex-col items-center justify-center px-4 py-24 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-50 pointer-events-none" />
 
             <FloatingLogo />
@@ -96,7 +117,7 @@ export function Hero() {
                 <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight text-gray-900 leading-[1.1]">
                     Notes for <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-600 to-indigo-600">
-                        RGPV students
+                        Btech students
                     </span>
                 </h1>
 
@@ -113,15 +134,17 @@ export function Hero() {
                 transition={{ delay: 0.3, duration: 0.5 }}
                 className="mt-16 w-full max-w-3xl relative z-10"
             >
-                <div className="shadow-[0_20px_50px_rgba(0,0,0,0.05)] bg-white/80 backdrop-blur-xl border border-gray-200 rounded-3xl p-1 overflow-hidden ring-1 ring-gray-900/5">
+                <div className=" border border-gray-800 shadow-[0_20px_50px_rgba(0,0,0,0.05)] bg-white/80 backdrop-blur-xl  rounded-3xl p-1 overflow-hidden ring-1 ring-gray-900/5">
                     {/* Progress Header */}
                     <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 bg-white/50">
                         <div className="flex items-center gap-2 text-sm">
+                            <span className={cn("font-semibold transition-colors", step === "university" ? "text-primary" : "text-gray-400")}>University</span>
+                            <ChevronRight className="w-4 h-4 text-gray-300" />
                             <span className={cn("font-semibold transition-colors", step === "branch" ? "text-primary" : "text-gray-400")}>Branch</span>
                             <ChevronRight className="w-4 h-4 text-gray-300" />
                             <span className={cn("font-semibold transition-colors", step === "semester" ? "text-primary" : "text-gray-400")}>Semester</span>
                         </div>
-                        {step !== "branch" && (
+                        {step !== "university" && (
                             <button
                                 onClick={resetSelection}
                                 className="text-xs font-medium text-gray-400 hover:text-gray-900 transition-colors"
@@ -132,8 +155,29 @@ export function Hero() {
                     </div>
 
                     {/* Content Area */}
-                    <div className="p-6 min-h-[300px] flex flex-col justify-center bg-white/40">
+                    <div className="p-6 min-h-[300px] rounded-3xl border border-gray-800   flex flex-col justify-center bg-white/10">
                         <AnimatePresence mode="wait">
+                            {step === "university" && (
+                                <motion.div
+                                    key="university"
+                                    initial={{ opacity: 0, x: 20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    exit={{ opacity: 0, x: -20 }}
+                                    className="space-y-4"
+                                >
+                                    <div className="grid grid-cols-2 gap-4">
+                                        {universities.map((uni) => (
+                                            <button
+                                                key={uni.slug}
+                                                onClick={() => handleUniversitySelect(uni.slug)}
+                                                className="group border border-gray-800 flex flex-col items-center justify-center p-24 rounded-2xl bg-white border border-gray-100 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+                                            >
+                                                <span className="text-3xl font-black text-gray-400 group-hover:text-gray-500 mb-2 transition-colors">{uni.label}</span>
+                                            </button>
+                                        ))}
+                                    </div>
+                                </motion.div>
+                            )}
                             {step === "branch" && (
                                 <motion.div
                                     key="branch"
@@ -147,7 +191,7 @@ export function Hero() {
                                             <button
                                                 key={branch.slug}
                                                 onClick={() => handleBranchSelect(branch.slug)}
-                                                className="group flex flex-col items-center justify-center p-6 rounded-2xl bg-white border border-gray-100 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+                                                className="group border border-gray-800   flex flex-col items-center justify-center p-6 rounded-2xl bg-white border border-gray-100 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
                                             >
                                                 <span className="font-semibold text-gray-900 group-hover:text-primary transition-colors">{branch.label}</span>
                                             </button>
@@ -166,7 +210,6 @@ export function Hero() {
                                     )}
                                 </motion.div>
                             )}
-
                             {step === "semester" && (
                                 <motion.div
                                     key="semester"
@@ -179,10 +222,10 @@ export function Hero() {
                                         <Link
                                             key={sem.slug}
                                             href={`/dashboard/btech/${selectedBranch}/${sem.slug}`}
-                                            className="group flex flex-col items-center justify-center p-5 rounded-2xl bg-white border border-gray-100 hover:border-primary hover:shadow-lg hover:shadow-primary/20 transition-all duration-300"
+                                            className="group border border-gray-800   flex flex-col items-center justify-center p-6 rounded-2xl bg-white border border-gray-100 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
                                         >
-                                            <span className="text-xl font-bold text-gray-900 transition-colors">{sem.label.split(" ")[1]}</span>
-                                            <span className="text-xs uppercase tracking-wider font-semibold text-gray-400 transition-colors">Semester</span>
+                                            <span className="text-3xl font-black text-gray-200 group-hover:text-gray-500 mb-2 transition-colors">{sem.label.split(" ")[1]}</span>
+                                            <span className="font-bold text-gray-900 group-hover:text-gray-800 transition-colors">Semester</span>
                                         </Link>
                                     ))}
                                 </motion.div>

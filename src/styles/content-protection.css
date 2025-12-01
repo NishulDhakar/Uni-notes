@@ -5,8 +5,6 @@
   user-select: none;
 }
 
-/* disable selection pseudo */
 .nocopy *::selection { background: transparent; color: inherit; }
 
-/* hide caret on selection attempts */
 .nocopy input, .nocopy textarea { user-select: text !important; }

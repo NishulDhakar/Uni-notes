@@ -58,8 +58,34 @@ const navigationData = [
       {
         title: "CSE",
         items: [
-          { title: "Semester 1", href: "/dashboard/btech/cse/sem1" },
-          // ... other sems
+          {
+            title: "First Year",
+            items: [
+              { title: "Semester 1", href: "/dashboard/btech/cse/sem1" },
+              { title: "Semester 2", href: "/dashboard/btech/cse/sem2" },
+            ],
+          },
+          {
+            title: "Second Year",
+            items: [
+              { title: "Semester 3", href: "/dashboard/btech/cse/sem3" },
+              { title: "Semester 4", href: "/dashboard/btech/cse/sem4" },
+            ],
+          },
+          {
+            title: "Third Year",
+            items: [
+              { title: "Semester 5", href: "/dashboard/btech/cse/sem5" },
+              { title: "Semester 6", href: "/dashboard/btech/cse/sem6" },
+            ],
+          },
+          {
+            title: "Fourth Year",
+            items: [
+              { title: "Semester 7", href: "/dashboard/btech/cse/sem7" },
+              { title: "Semester 8", href: "/dashboard/btech/cse/sem8" },
+            ],
+          },
         ]
       }
     ],

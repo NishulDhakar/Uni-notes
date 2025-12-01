@@ -23,7 +23,7 @@ export function LandingPage() {
                 </React.Suspense>
                 <About />
                 <WhyUs />
-                <Services />
+                {/* <Services /> */}
                 <Testimonials />
                 <FAQ />
                 <Contact />
